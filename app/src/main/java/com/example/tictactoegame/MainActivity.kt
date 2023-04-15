@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         val currentTime = System.currentTimeMillis()
         if (currentTime - lastPress > 5000) {
-            Toast.makeText(baseContext, "Press back again to exit", Toast.LENGTH_LONG).show()
+            Toast.makeText(baseContext, "Press back again to exit", Toast.LENGTH_SHORT).show()
             lastPress = currentTime
         } else {
 

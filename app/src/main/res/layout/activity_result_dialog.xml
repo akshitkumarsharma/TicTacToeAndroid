@@ -31,7 +31,24 @@
             android:textStyle="bold"
             android:backgroundTint="@color/white"
             android:text="Start Again"
-            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/lavender"
+            app:cornerRadius = "20dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/exitButton"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/white"
+            android:text="exit"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
             android:textColor="@color/lavender"
             app:cornerRadius = "20dp"/>
     </LinearLayout>

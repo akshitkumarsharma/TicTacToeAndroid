@@ -18,12 +18,18 @@ class ResultDialog(context: Context, var message: String?, var mainActivity: Mai
 
         val messageText = findViewById<TextView>(R.id.messageText)
         val startAgainButton = findViewById<Button>(R.id.startAgainButton)
+        val exitButton=findViewById<Button>(R.id.exitButton)
+
 
         messageText.setText(message);
 
         startAgainButton.setOnClickListener {
             mainActivity?.restartMatch();
             dismiss();
+        }
+
+        exitButton.setOnClickListener {
+            System.exit(0)
         }
     }
 }
