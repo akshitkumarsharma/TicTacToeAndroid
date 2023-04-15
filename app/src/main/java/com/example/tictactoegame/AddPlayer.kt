@@ -34,6 +34,7 @@ class AddPlayer : AppCompatActivity() {
                 intent.putExtra("playerOne", getPlayerOneName)
                 intent.putExtra("playerTwo", getPlayerTwoName)
                 startActivity(intent)
+                this@AddPlayer.finish()
             }
         }
 

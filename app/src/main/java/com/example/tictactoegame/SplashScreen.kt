@@ -29,7 +29,7 @@ class SplashScreen : AppCompatActivity() {
                 startActivity(i)
                 this@SplashScreen.finish()
             }
-        }, 4200)
+        }, 4225)
 
     }
 }

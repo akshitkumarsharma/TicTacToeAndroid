@@ -3,6 +3,7 @@ package com.example.tictactoegame
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tictactoegame.databinding.ActivityMainBinding
 
@@ -109,6 +110,20 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    var lastPress: Long = 0
+    override fun onBackPressed() {
+        val currentTime = System.currentTimeMillis()
+        if (currentTime - lastPress > 5000) {
+            Toast.makeText(baseContext, "Press back again to exit", Toast.LENGTH_LONG).show()
+            lastPress = currentTime
+        } else {
+
+            super.onBackPressed()
+        }
+    }
+
+
 
     private fun performAction(imageView: ImageView, selectedBoxPosition: Int) {
         boxPositions[selectedBoxPosition] = playerTurn
