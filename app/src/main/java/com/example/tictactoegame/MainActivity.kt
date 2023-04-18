@@ -1,5 +1,6 @@
 package com.example.tictactoegame
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.ImageView
@@ -131,6 +132,9 @@ class MainActivity : AppCompatActivity() {
             imageView.setImageResource(R.drawable.ximage)
             if (checkResults()) {
                 finishSound.start()
+                //call wining animation
+                val i = Intent(applicationContext, WiningAnimation::class.java)
+                startActivity(i)
                 val resultDialog = ResultDialog(
                     this@MainActivity, binding!!.playerOneName.text.toString()
                             + " is a Winner!", this@MainActivity
@@ -149,6 +153,9 @@ class MainActivity : AppCompatActivity() {
             imageView.setImageResource(R.drawable.oimage)
             if (checkResults()) {
                 finishSound.start()
+                //call wining animation
+                val i = Intent(applicationContext, WiningAnimation::class.java)
+                startActivity(i)
                 val resultDialog = ResultDialog(
                     this@MainActivity, binding!!.playerTwoName.text.toString()
                             + " is a Winner!", this@MainActivity

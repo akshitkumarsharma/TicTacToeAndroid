@@ -9,6 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lavender">#8692F7</color>
     <color name="lavenderLight">#e6e6ff</color>
-    <color name="lavenderLighsasat">#FF0000</color>
+    <color name="red">#FF0000</color>
     <color name="transparent">#00000000</color>
 </resources>
